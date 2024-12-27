@@ -32,12 +32,9 @@ const Home = () => {
         </button>
       </form>
       <div className="movies-grid">
-        {movieList.map(
-          (movie) =>
-            movie.title.toLowerCase().startsWith(searchQuery) && (
-              <MovieCard movie={movie} key={movie.id} />
-            )
-        )}
+        {movieList.map((movie) => (
+          <MovieCard movie={movie} key={movie.id} />
+        ))}
       </div>
     </div>
   );
